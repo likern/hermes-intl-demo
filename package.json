@@ -1,5 +1,4 @@
 {
-  "main": "index.js",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -8,25 +7,29 @@
     "test": "jest"
   },
   "dependencies": {
+    "expo": "~37.0.3",
+    "expo-splash-screen": "^0.2.3",
+    "expo-updates": "~0.2.0",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "~0.61.5",
+    "react-native-gesture-handler": "~1.6.0",
+    "react-native-reanimated": "~1.7.0",
+    "react-native-screens": "~2.2.0",
+    "react-native-unimodules": "~0.9.0",
+    "react-native-web": "~0.11.7",
     "@formatjs/intl-datetimeformat": "^1.2.2",
     "@formatjs/intl-getcanonicallocales": "^1.2.6",
     "@formatjs/intl-numberformat": "^4.2.9",
     "@formatjs/intl-pluralrules": "^2.2.9",
-    "expo": "~37.0.3",
-    "expo-updates": "~0.2.0",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
     "react-intl": "^4.7.2",
-    "react-native": "~0.61.5",
-    "react-native-gesture-handler": "~1.6.0",
-    "react-native-localize": "^1.4.0",
-    "react-native-reanimated": "~1.7.0",
-    "react-native-screens": "~2.2.0",
-    "react-native-unimodules": "~0.9.0",
-    "react-native-web": "~0.11.7"
+    "react-native-localize": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6",
+    "react-test-renderer": "~16.9.0",
     "@types/react": "~16.9.23",
     "@types/react-native": "~0.61.23",
     "babel-preset-expo": "~8.1.0",
@@ -36,5 +39,7 @@
   "jest": {
     "preset": "react-native"
   },
-  "private": true
+  "private": true,
+  "name": "hermes-intl-demo",
+  "version": "1.0.0"
 }

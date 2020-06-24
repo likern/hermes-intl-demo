@@ -12,6 +12,13 @@
     ],
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "bundleIdentifier": "Awesome"
+    },
+    "android": {
+      "package": "com.example.hermesintl"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
