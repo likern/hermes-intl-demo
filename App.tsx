@@ -1,15 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import '@formatjs/intl-getcanonicallocales/polyfill'
-import '@formatjs/intl-pluralrules/polyfill'
-import '@formatjs/intl-pluralrules/dist/locale-data/ru'
-import '@formatjs/intl-pluralrules/dist/locale-data/en'
-import '@formatjs/intl-numberformat/polyfill'
-import '@formatjs/intl-numberformat/dist/locale-data/ru'
-import '@formatjs/intl-numberformat/dist/locale-data/en'
-import '@formatjs/intl-datetimeformat/polyfill'
-import '@formatjs/intl-datetimeformat/dist/locale-data/ru'
-import '@formatjs/intl-datetimeformat/dist/locale-data/en'
 
 import {
   IntlProvider,
@@ -22,19 +12,6 @@ import { translations } from './i18n';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{new Intl.DateTimeFormat('ru', {
-      weekday: 'long',
-      era: 'long',
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      hour12: true,
-      timeZone: 'UTC',
-      timeZoneName: 'long',
-    }).format(Date.now())}</Text>
       <Text>Open up App.tsx to start working on your app!</Text>
       <Text><FormattedMessage id={'screens.onboarding.0.title'} /></Text>
     </View>

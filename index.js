@@ -1,4 +1,5 @@
 import { registerRootComponent } from 'expo';
+import "./configure"
 
 import {LocalizedApp} from './App'
 
