@@ -2,11 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import '@formatjs/intl-getcanonicallocales/polyfill'
 import '@formatjs/intl-pluralrules/polyfill'
-import '@formatjs/intl-pluralrules/dist/locale-data/ja'
+import '@formatjs/intl-pluralrules/dist/locale-data/ru'
+import '@formatjs/intl-pluralrules/dist/locale-data/en'
 import '@formatjs/intl-numberformat/polyfill'
-import '@formatjs/intl-numberformat/dist/locale-data/ja'
+import '@formatjs/intl-numberformat/dist/locale-data/ru'
+import '@formatjs/intl-numberformat/dist/locale-data/en'
 import '@formatjs/intl-datetimeformat/polyfill'
-import '@formatjs/intl-datetimeformat/dist/locale-data/ja'
+import '@formatjs/intl-datetimeformat/dist/locale-data/ru'
+import '@formatjs/intl-datetimeformat/dist/locale-data/en'
 
 import {
   IntlProvider,
@@ -19,7 +22,7 @@ import { translations } from './i18n';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{new Intl.DateTimeFormat('ja', {
+      <Text>{new Intl.DateTimeFormat('ru', {
       weekday: 'long',
       era: 'long',
       year: 'numeric',
@@ -33,16 +36,14 @@ export default function App() {
       timeZoneName: 'long',
     }).format(Date.now())}</Text>
       <Text>Open up App.tsx to start working on your app!</Text>
+      <Text><FormattedMessage id={'screens.onboarding.0.title'} /></Text>
     </View>
   );
 }
 
-const LocalizedApplication = () => {
+export const LocalizedApp = () => {
   const currentLocale = useLocale();
-
-
   return (
-    
       <IntlProvider
         locale={currentLocale}
         messages={translations[currentLocale]}
@@ -51,7 +52,7 @@ const LocalizedApplication = () => {
      // look at this https://github.com/Microsoft/TypeScript/issues/27552
      // for how to ignore such bugs
      // @ts-ignore */}
-        <Application />
+        <App />
       </IntlProvider>
     
   );
